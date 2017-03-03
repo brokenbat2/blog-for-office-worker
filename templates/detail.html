@@ -12,7 +12,7 @@
       <div class="blog-post">
         <p>{{ article.content }}</p>
       </div>
-      <div>
+      <div class="homework2">
         {% for comment in article.article_comments.all %}
           <div>{{ comment.username }} : {{ comment.content }} </div>
         {% endfor %}
@@ -24,7 +24,9 @@
           {% csrf_token %}
           <div>
             <div class="form-group">
+
               <input placeholder="아이디" class="form-control" name="username" />
+
             </div>
             <div class="form-group">
               <input placeholder="내용" class="form-control" name="content" />
